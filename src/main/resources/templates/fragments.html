@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"><body>
+<svg th:fragment="weather-icon(icon, sizeClass)" class="weather-condition-icon" th:classappend="${sizeClass}" viewBox="0 0 48 48" role="img" th:attr="aria-label=${icon.label()}" focusable="false"><use th:attr="href=|/images/weather-icons.svg#${icon.symbol()}|"></use></svg>
+<a th:fragment="brand" class="brand" href="/" aria-label="Mausam Setu home">
+  <svg class="brand-monogram" viewBox="0 0 52 52" aria-hidden="true" focusable="false">
+    <path class="monogram-m" d="M7.5 38V14.5l12.3 15 12.1-15V38"/>
+    <path class="monogram-s" d="M43.5 17.3c-2.7-3.3-6.4-4.7-10.3-3.8-4.4 1-6.3 5-4.1 8.2 2.8 4 10.6 3.2 13 7.1 2.4 3.8-.4 8.5-5.2 9.5-4 .8-7.9-.4-10.5-3.1"/>
+    <path class="brand-star" d="M43.1 5v4.2m-2.1-2.1h4.2M8.1 43v3m-1.5-1.5h3"/>
+    <circle class="brand-star-dot" cx="18.4" cy="7.5" r="1"/>
+  </svg>
+  <span class="brand-wordmark"><span class="brand-script">Mausam Setu</span><small>WEATHER · CONNECTED</small></span>
+</a>
+<nav th:fragment="nav" class="nav" aria-label="Main navigation"><a th:replace="~{fragments :: brand}"></a><button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-links" type="button"><span></span><span></span></button><div id="primary-links" class="nav-links"><a href="/#weather">Weather</a><a href="/#destinations">Destinations</a><a href="/locations">Saved places</a><a href="/history">History</a><a href="/about">About</a></div></nav>
+<footer th:fragment="footer" class="footer"><div class="footer-brand"><a th:replace="~{fragments :: brand}"></a><p>Weather, connected to you.</p></div><div class="footer-links"><a href="/#weather">Weather</a><a href="/#destinations">Destinations</a><a href="/locations">Saved places</a><a href="/history">History</a><a href="/about">About MSetu</a></div><div class="footer-meta"><span>Weather data by OpenWeather</span><span>Location imagery credited beside each scene</span></div></footer>
+</body></html>
+

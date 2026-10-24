@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="clear-day" viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 4v5m0 30v5M4 24h5m30 0h5M9.9 9.9l3.6 3.6m21 21 3.6 3.6m0-28.2-3.6 3.6m-21 21-3.6 3.6"/></symbol>
+  <symbol id="clear-night" viewBox="0 0 48 48"><path d="M37 30.5A17 17 0 0 1 17.5 8 17.5 17.5 0 1 0 40 29.5c-1 .5-2 .8-3 .9Z"/><path d="M32 8v4m-2-2h4"/></symbol>
+  <symbol id="few-clouds-day" viewBox="0 0 48 48"><circle cx="32" cy="15" r="6"/><path d="M32 4v2m0 18v2m-11-11h2m18 0h2m-19-8 2 2m12 12 2 2m0-16-2 2m-12 12-2 2M12 36h23a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-4 16Z"/></symbol>
+  <symbol id="few-clouds-night" viewBox="0 0 48 48"><path d="M32 6a10 10 0 0 0 9 14 10 10 0 0 1-17-10 10 10 0 0 1 8-4Z"/><path d="M10 37h25a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-6 16Z"/></symbol>
+  <symbol id="scattered-clouds-day" viewBox="0 0 48 48"><circle cx="18" cy="17" r="6"/><path d="M18 6v2m0 18v2M7 17h2m18 0h2m-19-8 2 2m12 12 2 2m0-16-2 2m-12 12-2 2M14 38h23a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-4 16Z"/></symbol>
+  <symbol id="scattered-clouds-night" viewBox="0 0 48 48"><path d="M31 6a9 9 0 0 0 8 13 9 9 0 0 1-15-9 9 9 0 0 1 7-4Z"/><path d="M12 38h25a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-6 16Z"/></symbol>
+  <symbol id="broken-clouds" viewBox="0 0 48 48"><path d="M10 34h24a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-5 16Z"/><path d="M20 18a8 8 0 0 1 15 1 6 6 0 0 1 3 11h-4"/></symbol>
+  <symbol id="overcast" viewBox="0 0 48 48"><path d="M9 27h20a6 6 0 0 0 0-12 8 8 0 0 0-15-2 6 6 0 0 0-5 14Z"/><path d="M11 38h25a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-6 16Z"/></symbol>
+  <symbol id="drizzle" viewBox="0 0 48 48"><path d="M10 29h25a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-6 16Z"/><path d="m17 35-1 3m9-3-1 3m9-3-1 3"/></symbol>
+  <symbol id="rain" viewBox="0 0 48 48"><path d="M10 28h25a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-6 16Z"/><path d="m17 33-3 7m12-7-3 7m12-7-3 7"/></symbol>
+  <symbol id="thunderstorm" viewBox="0 0 48 48"><path d="M10 26h25a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-6 16Z"/><path d="m26 25-8 12h7l-2 8 10-14h-7l3-6"/></symbol>
+  <symbol id="snow" viewBox="0 0 48 48"><path d="M10 27h25a7 7 0 0 0 0-14 10 10 0 0 0-19-2 7 7 0 0 0-6 16Z"/><path d="M17 33v10m-4-7 8 4m0-8-8 8m18-7v10m-4-7 8 4m0-8-8 8"/></symbol>
+  <symbol id="mist" viewBox="0 0 48 48"><path d="M12 19h24M7 27h34M12 35h24M17 11h14"/></symbol>
+  <symbol id="smoke" viewBox="0 0 48 48"><path d="M10 34c5-8 10 8 16 0s11 8 16 0M7 25c5-8 10 8 16 0s11 8 16 0M14 16c5-8 10 8 16 0s7 3 10 2"/></symbol>
+  <symbol id="haze" viewBox="0 0 48 48"><circle cx="24" cy="18" r="7"/><path d="M8 29h32M11 36h26M17 7v2m14-2v2"/></symbol>
+  <symbol id="dust" viewBox="0 0 48 48"><path d="M7 17h22a5 5 0 1 0-5-5M12 25h28a5 5 0 1 1-5 5M7 34h19a5 5 0 1 0-5 5"/></symbol>
+  <symbol id="wind" viewBox="0 0 48 48"><path d="M5 16h29a6 6 0 1 0-6-6M5 24h37a6 6 0 1 1-6 6M5 32h24a6 6 0 1 0-6 6"/></symbol>
+  <symbol id="tornado" viewBox="0 0 48 48"><path d="M7 10h34M11 17h26M15 24h18M19 31h10l-3 8"/></symbol>
+  <symbol id="neutral-cloud" viewBox="0 0 48 48"><path d="M10 36h25a8 8 0 0 0 0-16 10 10 0 0 0-19-2 8 8 0 0 0-6 18Z"/></symbol>
+</svg>
