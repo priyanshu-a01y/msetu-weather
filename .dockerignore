@@ -1,0 +1,14 @@
+.git
+.github
+.idea
+.vscode
+target
+.m2
+.m2repo
+.mvn-cache
+.env
+.env.*
+!.env.example
+*.log
+application-local.properties
+application-secrets.properties
