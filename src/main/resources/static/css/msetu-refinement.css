@@ -615,3 +615,108 @@ html.has-motion-js .hero-forecast.reveal-section.is-visible { opacity: 1; transl
   .ambient-hero.discovery-state .sky-cloud-front,
   .ambient-hero.discovery-state .atmospheric-sky::before { animation: none !important; }
 }
+
+/* MSetu cinematic discovery sky: deeper cloud volume, moving light and foreground haze. */
+.ambient-hero.discovery-state .atmospheric-sky {
+  background-color: #071321;
+  isolation: isolate;
+}
+.ambient-hero.discovery-state .sky-plate {
+  filter: brightness(.88) saturate(.92) contrast(1.06);
+  animation: msetu-discovery-plate 46s ease-in-out infinite alternate;
+  will-change: transform, filter;
+}
+.ambient-hero.discovery-state .sky-drift {
+  opacity: .38;
+  filter: brightness(.92) saturate(.9) blur(1px);
+  animation: msetu-discovery-drift 27s ease-in-out infinite alternate-reverse;
+  will-change: transform, opacity;
+}
+.ambient-hero.discovery-state .sky-cloud-layer {
+  inset: -14% -18% -6%;
+  filter: blur(17px);
+  mix-blend-mode: screen;
+}
+.ambient-hero.discovery-state .sky-cloud-back {
+  opacity: .86;
+  background:
+    radial-gradient(ellipse 32% 21% at 21% 36%, #e6f3ff61 0 22%, #c9e0f22b 47%, transparent 78%),
+    radial-gradient(ellipse 39% 24% at 47% 23%, #dceeff55 0 22%, #c6dff02a 48%, transparent 79%),
+    radial-gradient(ellipse 36% 23% at 72% 39%, #e7f3ff59 0 21%, #d2e8f332 48%, transparent 80%),
+    radial-gradient(ellipse 31% 21% at 91% 54%, #d9e9f24d 0 20%, #c0d9ed24 49%, transparent 80%),
+    radial-gradient(ellipse 43% 22% at 57% 67%, #a9c9e12b 0 22%, transparent 77%);
+  animation: msetu-cloud-back 29s ease-in-out infinite alternate;
+}
+.ambient-hero.discovery-state .sky-cloud-front {
+  inset: 18% -23% -10%;
+  opacity: .65;
+  filter: blur(27px) saturate(1.08);
+  background:
+    radial-gradient(ellipse 38% 17% at 15% 61%, #e1efff48 0 22%, #bfd8ed26 47%, transparent 80%),
+    radial-gradient(ellipse 34% 18% at 42% 76%, #d9e8f03d 0 23%, #bfd5e41c 48%, transparent 80%),
+    radial-gradient(ellipse 43% 19% at 75% 58%, #e9f4ff45 0 20%, #c7dff02a 49%, transparent 81%),
+    radial-gradient(ellipse 31% 17% at 96% 79%, #d3e6f43d 0 21%, transparent 79%);
+  animation: msetu-cloud-front 22s ease-in-out infinite alternate-reverse;
+}
+.ambient-hero.discovery-state .atmospheric-sky::after {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 42% 43% at 77% 35%, #d9e9ff22 0%, #b8d7f10c 36%, transparent 72%),
+    linear-gradient(115deg, transparent 38%, #f2e7cf0b 53%, #e3edff12 61%, transparent 75%),
+    linear-gradient(0deg, #06111fe0 0%, #08152542 26%, transparent 61%, #06101d4f 100%);
+  animation: msetu-atmosphere-breathe 12s ease-in-out infinite alternate;
+}
+.ambient-hero.discovery-state .atmospheric-sky::before {
+  z-index: 4;
+  top: 3%;
+  right: -2%;
+  width: min(61vw, 850px);
+  height: 86%;
+  background:
+    radial-gradient(ellipse at 70% 25%, #f4e8ce28 0%, #d7e8f21b 18%, transparent 50%),
+    radial-gradient(ellipse at 60% 47%, #d9e9f02b 0%, #b9d5e31b 26%, transparent 62%),
+    radial-gradient(ellipse at 82% 70%, #c7dced1c 0%, transparent 54%);
+  filter: blur(23px);
+  animation: msetu-cloud-glow 13s ease-in-out infinite alternate;
+}
+.ambient-hero.discovery-state .hero-legibility {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #06111fe8 0%, #091727c9 24%, #0b1a2b62 49%, #0b172a14 73%, #07132140 100%),
+    linear-gradient(0deg, #081423d9 0%, #0a172b45 26%, transparent 57%, #06101c72 100%);
+}
+.ambient-hero.discovery-state .hero-discovery h1 {
+  text-shadow: 0 3px 34px #030a14a6;
+}
+@keyframes msetu-discovery-plate {
+  from { transform: scale(1.015) translate3d(-.4%, 0, 0); }
+  to { transform: scale(1.085) translate3d(.8%, -1%, 0); }
+}
+@keyframes msetu-discovery-drift {
+  from { transform: scale(1.07) translate3d(1.5%, .5%, 0); opacity: .25; }
+  to { transform: scale(1.13) translate3d(-1.8%, -1%, 0); opacity: .43; }
+}
+@keyframes msetu-atmosphere-breathe {
+  from { opacity: .65; }
+  to { opacity: 1; }
+}
+@media (max-width: 700px) {
+  .ambient-hero.discovery-state .sky-plate { animation-duration: 65s; }
+  .ambient-hero.discovery-state .sky-drift { opacity: .23; animation-duration: 48s; }
+  .ambient-hero.discovery-state .sky-cloud-back { opacity: .66; filter: blur(22px); animation-duration: 43s; }
+  .ambient-hero.discovery-state .sky-cloud-front { opacity: .3; filter: blur(29px); animation-duration: 36s; }
+  .ambient-hero.discovery-state .atmospheric-sky::before { right: -25%; width: 105vw; height: 60%; opacity: .8; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-hero.discovery-state .sky-plate,
+  .ambient-hero.discovery-state .sky-drift,
+  .ambient-hero.discovery-state .sky-cloud-back,
+  .ambient-hero.discovery-state .sky-cloud-front,
+  .ambient-hero.discovery-state .atmospheric-sky::before,
+  .ambient-hero.discovery-state .atmospheric-sky::after { animation: none !important; }
+}
+
