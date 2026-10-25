@@ -86,3 +86,20 @@ To verify a live lookup after startup, run `Invoke-RestMethod "http://localhost:
 ## Screenshots
 
 Add genuine screenshots captured from a running local instance to a `screenshots/` folder and link them here. No screenshots are included because this project has not been launched against a configured database/API key in this workspace.
+## 📸 Screenshots
+
+### Homepage
+
+![MSetu Homepage](Screenshot%202026-10-25%20151250.png)
+
+### Weather Interface
+
+![MSetu Weather Interface](Screenshot%202026-10-25%20151548.png)
+
+### Application Preview
+
+![MSetu Application Preview](Screenshot%202026-10-25%20151624.png)
+
+## 🌐 Live Demo
+
+https://msetu-weather.onrender.com
