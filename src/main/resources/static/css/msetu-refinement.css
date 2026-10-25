@@ -560,3 +560,58 @@ html.has-motion-js .hero-forecast.reveal-section.is-visible { opacity: 1; transl
   .sky-rain .rain-drop, .sky-snow .snow-flake { display: none; }
   .atmospheric-sky.has-rain .sky-rain { opacity: 0; }
 }
+
+/* MSetu discovery hero: visible, slow-moving cloud layers when no city is searched. */
+.ambient-hero.discovery-state .sky-cloud-back,
+.ambient-hero.discovery-state .sky-cloud-front {
+  opacity: .58;
+  will-change: transform;
+}
+.ambient-hero.discovery-state .sky-cloud-back {
+  animation: msetu-cloud-back 34s ease-in-out infinite alternate;
+  background:
+    radial-gradient(ellipse 29% 18% at 28% 34%, #e7f2ff36 0 38%, transparent 77%),
+    radial-gradient(ellipse 38% 22% at 68% 29%, #d9e8f52b 0 40%, transparent 79%),
+    radial-gradient(ellipse 34% 18% at 89% 55%, #dceaf329 0 38%, transparent 78%),
+    radial-gradient(ellipse 26% 16% at 48% 67%, #c7d9ed20 0 42%, transparent 80%);
+}
+.ambient-hero.discovery-state .sky-cloud-front {
+  opacity: .42;
+  animation: msetu-cloud-front 25s ease-in-out infinite alternate-reverse;
+  background:
+    radial-gradient(ellipse 35% 17% at 18% 63%, #e2edf62a 0 38%, transparent 79%),
+    radial-gradient(ellipse 32% 15% at 76% 48%, #f0f6ff2b 0 40%, transparent 81%),
+    radial-gradient(ellipse 28% 16% at 57% 76%, #bcd1e323 0 40%, transparent 80%);
+}
+/* Give the right half a little extra atmospheric depth without covering the headline. */
+.ambient-hero.discovery-state .atmospheric-sky::before {
+  position: absolute;
+  z-index: 3;
+  top: 8%;
+  right: 2%;
+  width: min(48vw, 650px);
+  height: 70%;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 60% 42%, #b7d9f015 0 16%, transparent 58%),
+    radial-gradient(ellipse at 75% 64%, #d8e8f00c 0 12%, transparent 55%);
+  filter: blur(18px);
+  animation: msetu-cloud-glow 19s ease-in-out infinite alternate;
+}
+@keyframes msetu-cloud-glow {
+  from { transform: translate3d(-1.5%, 0, 0) scale(1); opacity: .55; }
+  to { transform: translate3d(2%, -1.5%, 0) scale(1.06); opacity: 1; }
+}
+@media (max-width: 700px) {
+  .ambient-hero.discovery-state .sky-cloud-back { animation-duration: 55s; }
+  .ambient-hero.discovery-state .sky-cloud-front { opacity: .27; animation-duration: 42s; }
+  .ambient-hero.discovery-state .atmospheric-sky::before {
+    top: 19%; right: -14%; width: 82vw; height: 52%; opacity: .7;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-hero.discovery-state .sky-cloud-back,
+  .ambient-hero.discovery-state .sky-cloud-front,
+  .ambient-hero.discovery-state .atmospheric-sky::before { animation: none !important; }
+}
